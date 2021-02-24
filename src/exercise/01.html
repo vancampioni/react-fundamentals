@@ -6,7 +6,7 @@
 
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
 <!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
+<!--   💰 document.createElement('div') --> 
 
 <!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
 <!--   💰 div.textContent = '...' -->
@@ -14,3 +14,29 @@
 <!-- 🐨 Append the div to the root div using `append` -->
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<div id="root"></div>-->
+    <script type="module">
+        //criando a div #root em código
+        let root = document.createElement('div')
+        root.id = 'root'
+        //A div root vai encaixada dentro do body
+        document.body.append(root)
+        let div = document.createElement('div') //cria um novo elemento na página usando js
+        div.textContent = 'Hello World da Vanessa!!!'
+        div.className = 'container'
+        // <div class ="container">Hello World! </div>
+        //document.querySelector('#root').append(div) //encontra e coloca a div criada pelo js dentro da div root
+        root.append(div) //Já temos a div root capturada em uma variável
+        //O append é obrigatório para encaixar o elemento criado na estrutura (todo elemento precisa de um pai)
+    </script>
+</body>
+</html>
